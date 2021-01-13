@@ -1,0 +1,112 @@
+.icon {
+
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+.icon-right {
+
+    margin-right: auto;
+    margin-left: 10px;
+}
+.icon-left {
+
+  margin-right: 10px;
+    margin-left: auto;
+}
+
+// .colorfondo {
+
+//     background-color: gray
+// }
+#notification-button {            
+    position: relative;
+    width: 42px;
+    top:1px;
+    right: 1px;
+    overflow: visible!important;
+}
+
+
+#notifications-badge {
+    background-color: primary;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 100%;
+}
+.notification-icon-button {
+    --overflow: visible;
+
+    ion-badge {
+      position: absolute;
+      background: #f70b0b;
+      border-radius: 50%;
+      opacity: 0.9;
+      top: 0.1 rem;
+      right: 1 rem;
+      & ~ ion-icon {
+        margin-right: 1.2rem;
+    }
+    }
+  }
+
+  .notification-icon-button-two {
+    --overflow: visible;
+
+    ion-badge {
+      position: absolute;
+      background: #804AB5;
+      border-radius: 50%;
+      opacity: 0.9;
+      top: 0.1 rem;
+      right: 1 rem;
+      & ~ ion-icon {
+        margin-right: 1.2rem;
+    }
+
+    .active{
+      background:red;
+            }
+            button.btn:active{
+              background:red;
+            }
+    }
+
+
+  }
+      
+  // ion-content{
+  //   background-color: #f1f5f8;
+  // }
+
+
+ ion-button{
+   --ion-text-color: #ffffff;
+   position: relative;
+ }
+ .colorText{
+  color: white;
+}
+
+
+
+ion-card {
+
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  --background: linear-gradient(90deg, white 0%, #f1f5f8 100%);
+  border-inline-color: gray;
+  padding: 14px;
+
+    
+
+  
+}
+
+
+
+  
+
+  

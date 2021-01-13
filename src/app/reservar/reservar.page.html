@@ -1,0 +1,166 @@
+<ion-header >
+  <ion-toolbar color="primary" >
+    <ion-buttons slot="start">
+      <ion-button (click)="cerrar()">
+        Cancelar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Reservar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+
+        <ion-card>
+          <form>
+            <!-- 1 -->
+            <!--
+          <ion-item class="form-group">
+            
+            <ion-label color="primary" position="stacked">ID Reserva Cabecera</ion-label>
+            <ion-input [(ngModel)]="id_reserva_cabecera" name="id_reserva_cabecera" type="text" maxlength="50" placeholder=""></ion-input>
+            
+          </ion-item>
+          -->
+         <!-- 2 -->
+          <ion-item class="form-group">
+            <ion-label color="primary" position="stacked">Rut Cliente</ion-label>
+            <ion-input [(ngModel)]="cliente_rut_cliente" name="cliente_rut_cliente" value="{{ rut }}" readonly color="gray" type="text" maxlength="12" placeholder="EJ:11111111-1"></ion-input>
+            
+          </ion-item>
+          <!-- 3 -->
+          <!-- <ion-item class="form-group" size="12"> -->
+              <!--    
+              <ion-label color="primary" position="stacked">MESA</ion-label>
+              <ion-input [(ngModel)]="mesa_id_mesa" type="text" name="mesa_id_mesa" maxlength="50" placeholder=""></ion-input>
+              -->
+              <!--<ion-list size="12">-->
+                  <!-- <ion-label color="primary" position="stacked">ESTADO</ion-label> -->
+                  <!--<ion-item-sliding ngFor="let mesa of mesas; let i = index" maxlength="50">-->
+                      <!-- <ion-select [(ngModel)]="mesa_id_mesa" maxlength="50" color="secundary" placeholder="Presione aqui para elegir la disponibilidad" maxlength="250">
+                        <ion-item-sliding ngFor="let mesa of mesas; let i = index" maxlength="50">
+                          <ion-select-option value="1">Pendiente</ion-select-option>
+                          <ion-select-option value="0">Cancelado</ion-select-option>
+                        </ion-item-sliding>
+                      </ion-select> -->
+                  <!--</ion-item-sliding>-->
+              <!--    </ion-list >-->
+          <!-- </ion-item> -->
+          <!--
+          <ion-item class="form-group">
+            <ion-label color="primary" position="stacked">ESTADO</ion-label>
+            <ion-input [(ngModel)]="estado" name="estado" type="text" maxlength="12" placeholder=""></ion-input>
+            
+          </ion-item>
+          -->
+<!-- 4 -->
+          <ion-item class="form-group">
+            <ion-label color="primary" position="stacked">Fecha de Reserva</ion-label>
+            <ion-input [(ngModel)]="fecha" name="fecha" type="text" maxlength="250" required placeholder="EJ:04/01/1997"></ion-input>
+            
+          </ion-item>
+          <!-- 5 -->
+          <ion-item class="form-group">
+            <div class="centertext">
+              <ion-label color="primary" position="stacked" >Descripción</ion-label>
+              <ion-input [(ngModel)]="descripcion" name="descripcion" clearOnEdit="true" required maxlength="50" placeholder="..."></ion-input>
+            </div>
+          </ion-item>
+<!-- 6 -->
+<!--
+          <ion-item class="form-group">
+            
+            <ion-label color="primary" position="stacked">ID Reserva DETALLE PRUEBA</ion-label>
+            <ion-input [(ngModel)]="id_reserva_detalle" name="id_reserva_detalle" type="text" maxlength="50" placeholder=""></ion-input>
+            
+          </ion-item>
+-->
+          <!-- 7 -->
+          <!--
+          <ion-item class="form-group">
+            
+            <ion-label color="primary" position="stacked">ID Reserva CAB2 PRUEBA</ion-label>
+            <ion-input [(ngModel)]="reserva_cab_id" name="reserva_cab_id" type="text" maxlength="50" placeholder=""></ion-input>
+            
+          </ion-item>
+          -->
+          <!-- 8 -->
+          <ion-item class="form group">
+            <ion-label color="primary" position="stacked">HORA INICIO</ion-label>
+            <ion-select [(ngModel)]="hora_inicio" interface="popover" name="hora_inicio" color="secundary" required placeholder="Hora de Inicio">
+              <ion-item-sliding>
+                <ion-select-option [value]="1201">12:01</ion-select-option>
+                <ion-select-option [value]="1301">13:01</ion-select-option>
+                <ion-select-option [value]="1401">14:01</ion-select-option>
+                <ion-select-option [value]="1501">15:01</ion-select-option>
+                <ion-select-option [value]="1601">16:01</ion-select-option>
+                <ion-select-option [value]="1701">17:01</ion-select-option>
+                <ion-select-option [value]="1801">18:01</ion-select-option>
+                <ion-select-option [value]="1901">19:01</ion-select-option>
+              </ion-item-sliding>
+            </ion-select>
+          </ion-item>
+          <!-- 9 -->
+          <ion-item class="form group">
+            <ion-label color="primary" position="stacked">HORA TERMINO</ion-label>
+            <ion-select [(ngModel)]="hora_termino" interface="popover" name="hora_termino" color="secundary" required placeholder="Hora de Termine">
+              <ion-item-sliding>
+                <ion-select-option [value]="1300">13:00</ion-select-option>
+                <ion-select-option [value]="1400">14:00</ion-select-option>
+                <ion-select-option [value]="1500">15:00</ion-select-option>
+                <ion-select-option [value]="1600">16:00</ion-select-option>
+                <ion-select-option [value]="1700">17:00</ion-select-option>
+                <ion-select-option [value]="1800">18:00</ion-select-option>
+                <ion-select-option [value]="1900">19:00</ion-select-option>
+                <ion-select-option [value]="2000">20:00</ion-select-option>
+              </ion-item-sliding>
+            </ion-select>
+          </ion-item>
+<!-- 10 -->
+          <ion-item class="form-group" size="12">
+            <!--    
+            <ion-label color="primary" position="stacked">MESA</ion-label>
+            <ion-input [(ngModel)]="mesa_id_mesa" type="text" name="mesa_id_mesa" maxlength="50" placeholder=""></ion-input>
+            -->
+            <!--<ion-list size="12">-->
+                <ion-label color="primary" position="stacked">MESA</ion-label>
+                <!--<ion-item-sliding ngFor="let mesa of mesas; let i = index" maxlength="50">-->
+                    <ion-select [(ngModel)]="mesa_id_mesa" interface="popover" maxlength="50" name="mesa" color="secundary" required placeholder="Presione aqui para elegir su mesa" maxlength="250">
+                      <ion-item-sliding ngFor="let mesa of mesas; let i = index" maxlength="50">
+                        <ion-select-option value="1">Mesa 1</ion-select-option>
+                        <ion-select-option value="2">Mesa 2</ion-select-option>
+                      </ion-item-sliding>
+                    </ion-select>
+                <!--</ion-item-sliding>-->
+            <!--    </ion-list >-->
+          </ion-item>
+          <!-- <ion-item class="form-group">
+            <ion-label color="primary" position="stacked">Escoja su Mesa</ion-label>
+            <ion-select [(ngModel)]="mesa_id_mesa">
+              <ion-select-option value="1">Mesa 1</ion-select-option>
+              <ion-select-option value="2">Mesa 2</ion-select-option>
+            </ion-select>
+          </ion-item> -->
+        </form>
+        </ion-card>
+     <!--BOTONES-->
+     
+
+     <ion-grid>
+      <ion-row>
+        
+        <ion-col>
+          <ion-button (click)="presentAlert()"  size="large" shape="round" color="primary" expand="block">Reservar</ion-button>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+       
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

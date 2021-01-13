@@ -1,0 +1,63 @@
+<ion-header >
+  <ion-toolbar color="primary" >
+    <ion-buttons name="btBack" slot="start">
+      <ion-back-button routerLink="/home">
+
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <form>
+    <ion-item class="form-group"> 
+      <ion-label color="primary" position="stacked">Nombre de Cliente</ion-label>
+      <ion-input [(ngModel)]="nombre_cliente" autocomplete="on" name="nombre_cliente" type="text" maxlength="50" required placeholder=""></ion-input>
+    </ion-item>
+    <ion-item class="form-group"> 
+      <ion-label color="primary" position="stacked">Contraseña</ion-label>
+      <ion-input [(ngModel)]="contrasenna" name="contrasenna" type="password" maxlength="50" required placeholder=""></ion-input>
+    </ion-item>
+    <ion-item class="form-group"> 
+      <ion-label color="primary" position="stacked">Dirección</ion-label>
+      <ion-input [(ngModel)]="direccion" name="direccion" type="text" maxlength="50" required placeholder=""></ion-input>
+    </ion-item>
+    <ion-item class="form-group"> 
+      <ion-label color="primary" position="stacked">Teléfono</ion-label>
+      <ion-input [(ngModel)]="telefono" name="telefono" type="text" maxlength="50" required placeholder=""></ion-input>
+    </ion-item>
+    <!-- <ion-item class="form-group">  -->
+      <!-- <ion-label color="primary" position="stacked">Restaurant</ion-label>
+      <ion-select [(ngModel)]="restaurant_id_restaurant" name="restaurant_id_restaurant" interface="popover">
+        <ion-select-option value="nes">1</ion-select-option>
+        
+      </ion-select> -->
+      <!-- <ion-label color="primary" position="stacked">Restaurant ID</ion-label>
+      <ion-input [(ngModel)]="restaurant_id_restaurant" name="restaurant_id_restaurant" type="text" maxlength="50" placeholder=""></ion-input>
+    </ion-item> -->
+    <ion-item class="form-group">
+      <ion-label color="primary" position="stacked">RUT</ion-label>
+      <ion-input [(ngModel)]="rut_cliente"   name="rut_cliente" type="text" maxlength="50" required placeholder=""></ion-input>
+    </ion-item>
+    <ion-item class="form-group">
+      <ion-label color="primary" position="stacked">Correo</ion-label>
+      <ion-input [(ngModel)]="correo" name="correo" type="text" maxlength="50" required placeholder=""></ion-input>
+    </ion-item>
+  </form>
+  </ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="presentAlert()" name="btInscribete" type="submit" mode="md" size="large" color="secondary" fill="solid" expand="block" >
+          Registrar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,135 @@
+<ion-header>
+  <ion-toolbar>
+<ion-grid>
+    <ion-row>
+      <ion-col size="2" size-sm="2" size-md="2" size-lg="10" size-xl="10">  
+      </ion-col>
+       <ion-col size="8" size-sm="8" size-md="8" size-lg="2" size-xl="2">
+         <ion-button [color]="buttonColor"  (click)="mostrarModal()"  class="icon" shape="round"  size="large" expand="full">Reservar</ion-button> 
+        </ion-col>
+      <ion-col size="2" size="2" size-sm="2" size-md="2" size-lg="1" size-xl="1">
+      </ion-col >
+    </ion-row>
+  </ion-grid>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="colorback">
+  <ion-grid>
+
+    <ion-row>
+      <ion-col size="12" size-sm="12" size-md="6" size-lg="3" size-xl="3">
+        <h1 color="primary"> Reserva Actual</h1>
+      </ion-col>
+    </ion-row>
+
+    
+  <ion-grid >
+    <ion-row>
+      <ion-col size="12" size-sm="12" size-md="6" size-lg="3" size-xl="3" *ngFor="let reserva of Reserva">
+        <ion-item-sliding>
+          <ion-item  lines="none" >
+            
+            <ion-card >
+
+              <ion-row>
+                <ion-col size="8">
+                  <ion-card-header col-size="8">
+                    <form >
+                    <h1>{{ reserva.id_reserva_cabecera }}</h1>
+                    <p>{{reserva.descripcion}}</p>
+                    <p>Reserva para el día - {{ reserva.fecha}} </p>
+                  </form>
+                  
+                  </ion-card-header>
+  
+                </ion-col>
+                <ion-col size="4">
+                  <!-- <ion-button  col-size="3" color="danger"  (click)="updateReserva(reserva.id_reserva_cabecera)" fill="clear">
+                    <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+                  </ion-button> -->
+  
+                </ion-col>
+              </ion-row>
+
+              <ion-card-content>
+                {{reserva.cliente_rut_cliente}}
+              </ion-card-content>
+            </ion-card>
+         
+    
+        </ion-item >
+        <ion-item-options side="end">
+          <ion-item-option (click)="updateReserva(reserva.id_reserva_cabecera)" color="danger" expandable>
+            Cancelar Reserva 
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  
+ 
+  <ion-row>
+    <ion-col size="12" size-sm="12" size-md="6" size-lg="3" size-xl="3">
+      <h1 color="primary"> Reserva Anteriores</h1>
+    </ion-col>
+  </ion-row>
+
+  <ion-grid >
+    <ion-row> 
+      <ion-col size="4" size-xs="12" size-sm="4" size-md="4" size-lg="4" size-xl="4" *ngFor="let reserva of Reserva2">
+         <ion-item lines="none">
+          <ion-card>
+            <ion-card-header >
+              <ion-col size="10" size-xs="10">
+                {{reserva.id_reserva_cabecera}} 
+                {{reserva.descripcion}}
+              </ion-col>
+             
+
+              
+            </ion-card-header>
+            <ion-card-content>
+              {{reserva.cliente_rut_cliente}}
+            </ion-card-content>
+          </ion-card>
+         </ion-item > 
+
+      </ion-col>
+
+    </ion-row>  
+  </ion-grid>
+ 
+
+  <!-- <div class="col-8">
+    <div class="row">
+
+        <div *ngFor="let pedido of Pedidos" class="col-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header">{{pedido.nombre_pedido}}</div>
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h5 class="card-title"></h5>
+                  
+                </div>
+                <div class="card-footer">
+                     <button type="submit"
+                       (click)="getDataUser(usuario.codu,usuario.username,usuario.firstname,usuario.lastname)"
+                        class="btn btn-warning btn-block">Edit User</button> -->
+                    <!-- <button (click)="deleteUser(usuario.codu)" type="submit"  class="btn btn-danger btn-block">Delete
+                        User</button> -->
+                <!-- </div>
+            </div>
+        </div> -->
+
+<!-- 
+    </div>
+</div>  -->
+</ion-grid>
+</ion-content>

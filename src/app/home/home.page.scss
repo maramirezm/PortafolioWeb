@@ -1,0 +1,62 @@
+.ion-font {
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+* {
+  font-weight: 300;
+}
+
+ion-content {
+  --background: #fafafa;
+}
+
+ion-text {
+  position: absolute;
+  top: 25%;
+
+    h1 {
+      font-size: 42px;
+
+    }
+
+    p {
+      font-size: 14px;
+      color: #696969
+    }
+
+}
+
+ .actions {
+   position: absolute;
+   width: 90%;
+   bottom: 16px;
+ }
+
+ //Estilo para todos los botones
+ ion-button {
+   --border-radius: 9px;
+   --box-shadow: none;
+   text-transform: initial;
+   font-size: 12px;
+ }
+
+ .login-buttons {
+   display: flex;
+   justify-content: space-between;
+
+   ion-button {
+     width: 45%;
+     --background: #fff;
+     --color: #3b3b3b;
+     --border-style: solid;
+     --border-color: #eeeeee;
+     --border-width: 0.5px;
+   }
+ }
+
+ .signup-btn {
+  display: flex;
+  --background: linear-gradient(90deg, #2e6b64 0%, #43ab94 100%);
+  
+ }

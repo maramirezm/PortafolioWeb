@@ -1,0 +1,7 @@
+{
+  "name": "siglo21",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

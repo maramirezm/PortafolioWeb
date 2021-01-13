@@ -1,0 +1,112 @@
+<ion-header >
+  <ion-toolbar color="primary" >
+    <ion-buttons slot="start">
+      <ion-button (click)="cerrar()">
+        Cancelar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Pedir</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <form> 
+      <!--
+      <ion-item class="form-group"> 
+        <ion-label color="primary" position="stacked">ID</ion-label>
+        <ion-input  [(ngModel)]="id_pedido_cabecera" name="id_pedido_cabecera" type="text" maxlength="50" placeholder=""></ion-input>
+      </ion-item>
+      -->
+      <ion-item class="form-group"> 
+        <ion-label color="primary" position="stacked">Nombre de Pedido</ion-label>
+        <ion-input [(ngModel)]="nombre_pedido" name="nombre_pedido" type="text" maxlength="50" placeholder=""></ion-input>
+      </ion-item>
+      <!-- <ion-item class="form-group"> 
+        <ion-label color="primary" position="stacked">Cantidad </ion-label>
+        <ion-input [(ngModel)]="cantidad" name="cantidad" type="text" maxlength="50" placeholder=""></ion-input>
+      </ion-item> -->
+      
+      <ion-item class="form-group"> 
+        <ion-label color="primary" position="stacked">comentarios</ion-label>
+        <ion-input [(ngModel)]="comentarios" name="comentarios" type="text" maxlength="50" placeholder=""></ion-input>
+      </ion-item>
+      <!-- <ion-item class="form-group"> 
+        <ion-label color="primary" position="stacked">ID RESERVA </ion-label>
+        <ion-input [(ngModel)]="reserva_det_id" name="reserva_det_id" type="text" maxlength="50" placeholder=""></ion-input>
+      </ion-item> -->
+      <!-- <ion-item class="form-group" size="12">
+        <ion-label color="primary" position="stacked">ESTADO</ion-label>
+        <ion-select [(ngModel)]="estado" name="estado"  maxlength="50" color="secundary" placeholder="Presione aqui para elegir la disponibilidad" maxlength="250">
+          <ion-item-sliding ngFor="let mesa of mesas; let i = index" maxlength="50">
+            <ion-select-option value="3">Realizar Pedido</ion-select-option>
+            <ion-select-option value="4">Pedido Cancelado</ion-select-option>
+            <ion-select-option value="5">Pedido ya entregado</ion-select-option>
+          </ion-item-sliding>
+        </ion-select>
+      </ion-item> -->
+      <!--
+        <ion-item class="form-group"> 
+          <ion-label color="primary" position="stacked">Estado</ion-label>
+          <ion-input [(ngModel)]="estado" name="estado" type="text" maxlength="50" placeholder=""></ion-input>
+        </ion-item>
+       -->
+       <!--
+      <ion-item class="form-group"> 
+        <ion-label color="primary" position="stacked">ID PEDIDO DETALLE</ion-label>
+        <ion-input [(ngModel)]="id_pedido_detalle" name="id_pedido_detalle" type="text" maxlength="50" placeholder=""></ion-input>
+      </ion-item>
+      -->
+      
+      <ion-item class="form-group">
+        <ion-select (ionChange)="precio()" [(ngModel)]="precio_pedido" interface="popover" name="precio_pedido"  maxlength="50" color="secundary" placeholder="Presione aqui para elegir el producto" maxlength="250">
+          <ion-item-sliding maxlength="50">
+            <ion-select-option value="1">{{comida1.name}} 
+              </ion-select-option>
+            <ion-select-option  value="2">{{comida2.name}} 
+              </ion-select-option>
+            <ion-select-option  value="3">{{comida3.name}}
+              </ion-select-option>
+            <ion-select-option  value="4">{{comida4.name}} 
+              </ion-select-option>
+            <ion-select-option  value="5">{{comida5.name}} 
+              </ion-select-option>
+          </ion-item-sliding>
+        </ion-select>
+      </ion-item>
+      <ion-item class="form group">
+        <ion-select (ionChange)="precio()" [(ngModel)]="cantidad" interface="popover" name="cantidad" color="secundary" placeholder="Selecione la cantidad de productos">
+          <ion-item-sliding>
+            <ion-select-option [value]="1">1</ion-select-option>
+            <ion-select-option [value]="2">2</ion-select-option>
+            <ion-select-option [value]="3">3</ion-select-option>
+            <ion-select-option [value]="4">4</ion-select-option>
+            <ion-select-option [value]="5">5</ion-select-option>
+            <ion-select-option [value]="6">6</ion-select-option>
+          </ion-item-sliding>
+        </ion-select>
+      </ion-item>
+
+      <ion-item  class="form-group"> 
+        <ion-label color="primary" position="stacked">total_venta</ion-label>
+        
+        <ion-input [value]="price" [(ngModel)]="total_venta" name="total_venta" type="text"  placeholder="" ></ion-input>
+        
+      </ion-item>
+
+    </form>
+  </ion-card>
+</ion-content>
+    
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="presentAlert()" type="submit" mode="md" size="large" color="secondary" fill="solid" expand="block" >
+          Registrar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
+

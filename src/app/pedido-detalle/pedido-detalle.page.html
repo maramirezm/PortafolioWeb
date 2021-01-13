@@ -1,0 +1,68 @@
+<ion-header >
+  <ion-toolbar color="primary" >
+    <ion-buttons slot="start">
+      <ion-button (click)="dispose()">
+        Cancelar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content id="htmlData">
+  <!-- <app-ped-det [nombre_pedido]="nombre_pedido" numero_pedido="numero_pedido" comentarios="comentarios" total_venta="valor_total"></app-ped-det> -->
+  <ion-card id="htmlData">
+    <ion-card-header>
+      <ion-card-header mode="ios">
+        DETALLE
+      </ion-card-header>
+    </ion-card-header>
+    <!-- LINEA 1 -->
+    <ion-row>
+      <ion-col size="8">
+        <p>Numero de Pedido:</p>
+      </ion-col>
+      <ion-col size="4">
+        <p>{{ numero_pedido }}</p>
+      </ion-col>
+    </ion-row> 
+    <!-- LINEA 2 -->
+    <ion-row>
+      <ion-col size="8">
+        <p>Nombre de Pedido:</p>
+      </ion-col>
+      <ion-col size="4">
+        <!-- <p>{{ NewNombrePedido }}  </p> -->
+   
+        <p >{{ nombre_pedido }}</p>
+      </ion-col>
+    </ion-row>
+     <!-- LINEA 3 -->
+     <ion-row>
+      <ion-col size="8">
+        <p>Comentarios:</p>
+      </ion-col>
+      <ion-col size="4">
+        <p>{{ comentarios }}</p>
+      </ion-col>
+    </ion-row>
+     <!-- LINEA 4 -->
+     <ion-row>
+      <ion-col size="8">
+        <p>Total Venta:</p>
+      </ion-col>
+      <ion-col size="4">
+        <p>{{ total_venta }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+    <ion-col expand="full">
+ <!-- BOTON -->
+        <ion-button shape="round"  color="danger" size="large" expand="full" (click)="updatePedido(numero_pedido)" >PEDIR CUENTA</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-footer>

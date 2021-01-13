@@ -1,0 +1,13 @@
+.cardHeader{
+
+    font-weight: bold;
+}
+
+ion-card{
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    // margin: 0 !important;
+    --background: linear-gradient(90deg, white 0%, #f1f5f8 100%);
+    
+   }
